@@ -1,0 +1,62 @@
+{
+	"NextJS Functional Component": {
+		"prefix": "nfc",
+		"body": [
+			"/**\n * $1 \n **/",
+			"const ${1:MyComponent}: React.FC<$1Props> = (${2:props}) => {",
+			"\treturn ${0:<div></div>}",
+			"}\n",
+			"// ***************************************************************************",
+			"// Props / Types",
+			"// ***************************************************************************",
+			"interface $1Props {",
+			"\tchildren: any",
+			"}\n",
+			"// ***************************************************************************",
+			"// Exports",
+			"// ***************************************************************************",
+			"export default ${1:}"
+		]
+	},
+	"NextJS Simple Page": {
+		"prefix": "npage",
+		"body": [
+			"import type { NextPage } from 'next'",
+			"\nconst ${1:NextPage}: NextPage = () => {",
+			"\treturn ${0:<div></div>}",
+			"}",
+			"\nexport default $1"
+		]
+	},
+	"NextJS Get Static Props": {
+		"prefix": "ngsprops",
+		"body": [
+			"export const getStaticProps: GetStaticProps$1 = async (${2:{ params \\}}) => {",
+			"\ttry {",
+			"\t\t${0:const id = params?.id}",
+			"\t\treturn { props: {} }",
+			"\t} catch {",
+			"\t\treturn { props: { errors: 'something went wrong getting static props' } }",
+			"\t}",
+			"}"
+		]
+	},
+	"NextJS Get Static Paths": {
+		"prefix": "ngspaths",
+		"body": [
+			"export const getStaticPaths: GetStaticPaths$1 = async () => {",
+			"\tconst paths = ${0: ['']}",
+			"\t // { fallback: false } mens other routes should raise 404",
+			"\treturn { paths , fallback: false }",
+			"}"
+		]
+	},
+	"NextJS Link": {
+		"prefix": "nlink",
+		"body": [
+			"<Link href=${1:\"\"}>",
+			"\t<a>$0</a>",
+			"</Link>"
+		]
+	}
+}
