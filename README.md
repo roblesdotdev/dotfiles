@@ -2,3 +2,4 @@
 
 - Git
 - Tmux
+- Bash aliases
